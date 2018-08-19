@@ -1,31 +1,97 @@
-.grid {
-display: grid;
-width: 900px;
-grid:
-'header header header'
-'select-game select-game select-game'
-'left content right'
-'left content right';
+* {
+    box-sizing: border-box;
+  }
 
+  body {
+      background-color: #203238;
+  }
+
+
+
+@media screen and (min-width: 765px) {
+  
+    .grid {
+        width: 100%;
+    }
+    .header {
+        width: 100%;
+
+    }
+}
+@media screen and (min-width: 1600px) {
+
+    .grid {
+        width: 1600px;
+    }
+    .header {
+        width: 1600px;
+        left: 50%;
+        margin-left: -800px;
+    }
+}
+
+
+.grid {
+
+display: grid;
+grid-template-rows: auto;
+grid-template-columns: 3fr 6fr 2fr;
+overflow: auto;
+top: 80px;
+position: relative;
+margin: auto;
 }
 
 .header {
     height: 80px;
-    
-    background-color: black;
+    position: fixed;
+    border: 2px #212728 solid;
+    background-color:#202422;
+    z-index: 999;
+
 }
 
 .select-game {
-    height: 200px;
-    background-color: yellow;
+    height: 300px;
+    grid-area: 2 / 1 / 3 / 4;
+    border: 2px #212728 solid;
 }
 
 .left {
-    background-color: green;
+    grid-area: 3 / 1 / 4 / 2;
+    border: 2px #212728 solid;
+    height: 500px;
+    background-color: #212a2c;
 }
 
 .right {
-    background-color: blue;
+    height: 400px;
+    grid-area: 3 / 3 / 4 / 4;
+    border: 2px #212728 solid;
+    background-color: #212a2c;
 }
 
-/*some comment 1
+.login {
+    float: right;
+    margin: 20px 10px;
+}
+.logo {
+    float: left;
+    margin: 6px 10px;
+}
+
+.Menu {
+    font-size: 25px;
+    margin: 25px 20px;
+    color: red;
+    border-bottom: 2px rgb(190, 190, 163) solid;
+}
+a:link {
+    text-decoration: none;
+    color: #bcc5c6;
+}
+a:visited {
+    text-decoration: none;
+    color: #bcc5c6;
+}
+
